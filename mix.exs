@@ -16,7 +16,8 @@ defmodule Lucide.MixProject do
       aliases: aliases(),
 
       # Hex
-      description: "A collection of Phoenix LiveView Components for all SVG Lucide Icons",
+      description:
+        "A collection of Phoenix LiveView Components for all SVG Lucide Icons (formerly Feather Icons).",
       package: package(),
 
       # Docs
@@ -36,7 +37,8 @@ defmodule Lucide.MixProject do
 
   defp docs do
     [
-      main: "Lucide",
+      main: "readme",
+      extras: ["README.md", "LICENSE.md"],
       source_url: @source_url,
       source_ref: "v#{@version}"
     ]
