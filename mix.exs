@@ -66,7 +66,8 @@ defmodule Lucide.MixProject do
       licenses: ["MIT"],
       links: %{
         github: @source_url
-      }
+      },
+      files: ["lib", "mix.exs", ".formatter.exs", "README.md", "LICENSE.md"]
     ]
   end
 end
