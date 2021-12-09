@@ -34,7 +34,7 @@ Any props passed in will be forwarded to the svg element
 
 ## Regenerate icons
 
-Clone down the latest [Lucide Icons](https://github.com/lucide-icons/lucide) github repo.
+Clone down the latest [Lucide Icons](https://github.com/lucide-icons/lucide) Github repo and run the generator task.
 
 ```bash
 git clone https://github.com/lucide-icons/lucide.git priv/lucide
