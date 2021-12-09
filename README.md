@@ -1,6 +1,6 @@
 # Phoenix LiveView Lucide Icons
 
-A collection of Phoenix LiveView Components for all SVG [Lucide Icons](https://https://lucide.dev/). Lucide Icons is a community fork of Feather Icons.
+A collection of Phoenix LiveView Components for all SVG [Lucide Icons](https://lucide.dev/). Lucide Icons is a community fork of Feather Icons.
 
 Based on [Phoenix LiveView Heroicons](https://github.com/rocketinsights/heroicons_liveview).
 
