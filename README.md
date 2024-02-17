@@ -16,20 +16,58 @@ end
 
 ## Usage
 
-Basic usage
+### Basic usage
 
 ```html
 <Lucide.activity />
 ```
 
-Any props passed in will be forwarded to the svg element
+### Dynamic Rendering:
+
+Use the `render` function to dynamically select an icon based on a variable:
+
+```html
+<Lucide.render icon="activity" />
+```
+
+### Passing Additional Attributes
+
+Besides, any attributes passed in will be forwarded to the svg element.
 
 ```html
 <Lucide.activity
-  id="activity-icon"
+  id="my-activity-icon"
   class="inline-block h-5 w-5"
   stroke_width="1.5"
 />
+```
+
+## Creating Your Own Component
+
+For further customization, consider wrapping Lucide icons within your own components.
+
+```elixir
+# core_components.ex
+
+attr :name, :string, required: true
+attr :class, :string, required: false, default: "icon"
+attr :rest, :global
+
+def icon(assigns) do
+  ~H"""
+  <Lucide.render icon={@name} class={@class} {@rest} />
+  """
+end
+```
+
+This approach allows you to define and use custom attributes for your icon components.
+
+### Usage in .html.heex Files
+
+Use your custom component in your HTML (html.heex) files:
+
+```html
+<.icon name="circle" />
 ```
 
 ## Regenerate icons
