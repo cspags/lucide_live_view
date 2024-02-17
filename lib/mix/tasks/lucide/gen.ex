@@ -50,6 +50,16 @@ defmodule Mix.Tasks.Lucide.Gen do
     defmodule #{module_name} do
       use Phoenix.Component
 
+      def render(%{icon: icon} = assigns) when is_bitstring(icon) do
+        # load the function names into the atom table
+        __MODULE__.module_info(:functions) |> Keyword.keys()
+        icon_atom = icon |> String.replace("-", "_") |> String.downcase() |> String.to_existing_atom()
+
+        apply(__MODULE__, icon_atom, [assigns])
+      end
+
+      def render(%{icon: icon} = assigns), do: apply(__MODULE__, icon, [assigns])
+
       #{Enum.join(functions, "\n")}
     end
     """
